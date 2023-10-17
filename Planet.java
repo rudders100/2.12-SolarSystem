@@ -11,9 +11,9 @@ public class Planet extends Sun{
         this.angle = angle;
         this.col = col;
     }
-    public void draw(SolarSystem solar){
+    public void draw(SolarSystem solar, double speed){
         solar.drawSolarObject(distance,angle,getDiameter(),col);
-        angle = angle < 360 ? angle += 1 : 0;
+        angle = angle < 360 ? angle += speed : 0;
     }
     public double getAngle() {
         return angle;
